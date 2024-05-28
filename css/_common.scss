@@ -1,0 +1,491 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+
+}
+
+@font-face {
+  font-family: 'displace_2.0black';
+  src: url('../fonts/displace20-black-webfont.woff2') format('woff2'),
+    url('../fonts/displace20-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'displace_2.0bold';
+  src: url('../fonts/displace20-bold-webfont.woff2') format('woff2'),
+    url('../fonts/displace20-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'displace_2.0light';
+  src: url('../fonts/displace20-light-webfont.woff2') format('woff2'),
+    url('../fonts/displace20-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'displace_2.0medium';
+  src: url('../fonts/displace20-medium-webfont.woff2') format('woff2'),
+    url('../fonts/displace20-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'displace_2.0regular';
+  src: url('../fonts/displace20-regular-webfont.woff2') format('woff2'),
+    url('../fonts/displace20-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body,
+html {
+  font-size: 1rem;
+  background: $whitecolor;
+  font-family: 'Nunito';
+  font-size: 62.5%;
+  font-size: 10px;
+  overflow-x: hidden;
+  font-style: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+strong {
+  font-weight: 700;
+}
+
+h1 {
+  font-family: 'Nunito';
+  font-size: 3.6rem;
+  text-align: center;
+  margin: 7.5rem 0;
+}
+
+h1 span {
+  color: #ed1c24;
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+h2 {
+  color: #171717;
+  font-family: 'Nunito';
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5.8rem;
+  line-height: 4.9rem;
+  color: $blackcolor;
+  margin: 0 0 3.2rem 0;
+  font-family: "displace_2.0bold";
+
+  span {
+    display: block;
+    font-family: 'Dancing Script';
+    font-size: 2rem;
+    font-weight: 700;
+    color: $orangecolor;
+  }
+}
+
+h3 span a {
+  float: right;
+  text-transform: capitalize;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+
+
+h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "displace_2.0bold";
+  color: $orangecolor;
+  font-size: 4rem;
+  line-height: 2.7rem;
+  margin: 0 0 1.5rem 0;
+}
+
+h5 {
+  color: $whitecolor;
+  font-family: 'displace_2.0regular';
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0 0 0 10rem;
+
+  span {
+    color: $offwhite;
+    font-family: "Dancing Script";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: block;
+  }
+}
+
+h6 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3.3rem;
+  color: $blackcolor;
+  position: relative;
+  margin: 0 0 2rem 0;
+}
+
+h6:after {
+  position: absolute;
+  background: $secondarycolor;
+  width: 50px;
+  height: 2px;
+  content: "";
+  bottom: -3px;
+  left: 0;
+}
+
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  max-width: 140rem;
+}
+
+a.prim-btn {
+  @include prim-btn;
+
+  &:hover {
+    background: $whitecolor;
+    color: $hovercolor;
+  }
+}
+
+a.second-btn {
+  @include prim-btn;
+  background: transparent;
+  color: $whitecolor;
+  border: 0.1rem solid $whitecolor;
+
+  &:hover {
+    background: $hovercolor;
+    color: $whitecolor;
+  }
+}
+
+.f-right {
+  float: right;
+}
+
+.orange-c {
+  background: $orangecolor;
+}
+
+.blue-c {
+  background: $bluecolor;
+}
+
+.green-c {
+  background: $lightgreencolor;
+}
+
+.pink-c {
+  background: $pinkcolor;
+}
+
+.darkgreen-c {
+  background: $greencolor;
+}
+
+.violet-c {
+  background: $violetcolor;
+}
+section {
+  padding: 7rem 0;
+}
+
+.white-c {
+  color: $whitecolor !important;
+  position: relative;
+  margin: 4rem 0;
+}
+
+/*slider dot*/
+.form-slider,
+.package-slider, .center-slider {
+  .slick-dots {
+    bottom: -3.5rem;
+    height: 1.6rem;
+    width: 100%;
+    text-align: center;
+
+    li {
+      height: 1.6rem;
+      width: 1.6rem;
+      margin: 0 0.8rem;
+
+      button {
+        width: 100%;
+        height: 1.5rem;
+        padding: 0;
+        text-indent: -9999px;
+
+        &:before {
+          height: 1.6rem;
+          width: 1.6rem !important;
+          border-radius: $radius4;
+          background: $inputborder;
+          top: 0;
+        }
+      }
+    }
+
+    li.slick-active button:before {
+      background: $hovercolor !important
+    }
+  }
+
+
+}
+
+.m-20 {
+  margin-left: 2rem;
+}
+
+.green-border {
+  position: relative;
+
+  &:before {
+    background: url(../images/border-light-green.png) repeat-x;
+    @include border-bg;
+  }
+}
+
+
+.pink-border {
+  position: relative;
+
+  &:before {
+    background: url(../images/border-pink.png) repeat-x;
+    @include border-bg;
+  }
+}
+
+.dark-green-border {
+  position: relative;
+
+  &:before {
+    background: url(../images/border-dark-green.png) repeat-x;
+    @include border-bg;
+  }
+}
+
+
+.orange-border {
+  position: relative;
+
+  &:before {
+    background: url(../images/border-orange.png) repeat-x;
+    @include border-bg;
+  }
+}
+
+.blue-border {
+  &:before {
+    background: url(../images/border-blue.png) repeat;
+    @include border-vl;
+  }
+
+}
+
+
+
+.violet-border {
+  &:before {
+    background: url(../images/border-violet.png) repeat;
+    @include border-vl;
+  }
+
+}
+
+.green-vl-border {
+  &:before {
+    background: url(../images/border-green-vl.png) repeat;
+    @include border-vl;
+  }
+
+}
+
+
+.orange-full-border {
+  position: relative;
+  &:before {
+    background: url(../images/border-orange.png) repeat-x;
+    @include border-bg;
+    bottom:0
+  }
+}
+
+
+.p-20{padding: 2rem;}
+.m-10{margin-bottom: 1rem !important;}
+.m-t-50{margin-top: 5rem !important;}
+.m-b-50{margin-bottom: 5rem;}
+.m-b-none{margin-bottom: 0rem !important;}
+.mtb-50{margin:5rem 0 5rem 0;}
+.m-b-30{margin-bottom:2rem !important; }
+.w-100{width:100% !important;}
+p.m-l-50 {
+  margin-left: 10rem !important;
+}
+
+p.m-l-50-bg {
+  margin-left: 10rem !important;
+  width: 40%;
+}
+
+.lightgreen {
+  color: $lightgreencolor !important;
+}
+
+.blue {
+  color: $bluecolor !important;
+}
+
+.orange {
+  color: $orangecolor !important;
+}
+
+.pink {
+  color: $pinkcolor !important;
+}
+
+.green {
+  color: $greencolor !important;
+}
+
+.violet {
+  color: $violetcolor !important;
+}
+.second-color {
+  color: $secondarycolor !important;
+}
+.para-text{@include com-text;}
+
+.center-align {
+  left: 50%;
+  top: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+
+.p-right{right: 0;}
+.p-left{left: 0;}
+.text-right {
+  text-align: right;
+}
